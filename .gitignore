@@ -79,3 +79,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.json
+*.bakert
+GameJame2018/Temp/UnityLockfile
+GameJame2018/Temp/UnityTempFile-1d331d08af52d9e438cb512d832cab12
+GameJame2018/Temp/UnityTempFile-d93660f8dac600e4f81908fd6590d817
