@@ -8,14 +8,20 @@ public class OptionScript : MonoBehaviour {
 
     public Slider volumeSlider;
     public GameObject gameData;
+    public GameObject gDataPfab;
     public string language;
 
 	// Use this for initialization
 	void Start ()
     {
+
         gameData = GameObject.Find("PersistentGameData");
-        UpdateValues();
-	}
+        if (gameData != null)
+        {
+            Debug.Log("gdata found");
+            UpdateValues();
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
