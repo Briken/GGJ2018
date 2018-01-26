@@ -9,7 +9,7 @@ public class NPCScript : MonoBehaviour
 
     public bool m_isInfected;
 
-    public bool m_letterDelivered;
+    public bool m_letterDelivered; 
 
 	// Use this for initialization
 	void Start ()

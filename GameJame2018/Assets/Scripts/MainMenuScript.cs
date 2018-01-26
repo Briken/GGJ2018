@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuScript : MonoBehaviour {
+public class MainMenuScript : MonoBehaviour
+{
 
 	// Use this for initialization
 	void Start ()
@@ -24,7 +25,7 @@ public class MainMenuScript : MonoBehaviour {
 
     public void OnOptionsClicked()
     {
-        SceneManager.LoadScene("OptionsScene");  
+        SceneManager.LoadScene("OptionScene");  
     }
 
     public void OnExitClicked()

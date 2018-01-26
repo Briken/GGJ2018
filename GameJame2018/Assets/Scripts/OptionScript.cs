@@ -22,7 +22,7 @@ public class OptionScript : MonoBehaviour {
 		
 	}
 
-    void LoadMenu(string sceneName)
+    public void LoadMenu(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
