@@ -413,6 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 998357045}
   gameData: {fileID: 0}
+  gDataPfab: {fileID: 1486081895524168, guid: ddb2aa15211344d4486695536dd1906f, type: 2}
   language: 
 --- !u!4 &186009860
 Transform:
