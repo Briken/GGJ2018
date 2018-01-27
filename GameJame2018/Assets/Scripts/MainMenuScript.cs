@@ -9,7 +9,7 @@ public class MainMenuScript : MonoBehaviour
     public AudioClip optionsClick;
     public AudioClip exitClick;
 
-    AudioSource audio;
+    AudioSource m_audio;
 
 	// Use this for initialization
 	void Start ()
@@ -25,19 +25,19 @@ public class MainMenuScript : MonoBehaviour
 
     public void OnPlayGameClicked()
     {
-        audio.PlayOneShot(clickPlay);
+        m_audio.PlayOneShot(clickPlay);
         PlayAndLoad(clickPlay.length, "GameScene");
     }
 
     public void OnOptionsClicked()
     {
-        audio.PlayOneShot(optionsClick);
+        m_audio.PlayOneShot(optionsClick);
         PlayAndLoad(optionsClick.length, "OptionScene");
     }
 
     public void OnExitClicked()
     {
-        audio.PlayOneShot(exitClick);
+        m_audio.PlayOneShot(exitClick);
         PlayAndLoad(exitClick.length, "");
     }
 

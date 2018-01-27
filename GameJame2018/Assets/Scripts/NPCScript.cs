@@ -13,12 +13,15 @@ public class NPCScript : MonoBehaviour
 
     public UnityEngine.UI.Image letterRecipientImage;
 
+    public GameObject speechBubble;
+
     public AudioClip speakSound;
+    AudioSource m_audio;
 
 	// Use this for initialization
 	void Start ()
     {
-		
+        m_audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -26,4 +29,18 @@ public class NPCScript : MonoBehaviour
     {
 		
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            m_isInfected = true;
+        }
+    }
+
+    public void speakToPat()
+    {
+        speechBubble.SetActive(true);
+        m_audio.PlayOneShot(speakSound);
+    }
 }
