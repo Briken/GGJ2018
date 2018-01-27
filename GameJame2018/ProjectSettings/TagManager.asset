@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameData
   - NPC
+  - AmbientNoise
   layers:
   - Default
   - TransparentFX
