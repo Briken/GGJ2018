@@ -19,7 +19,7 @@ public class ThirdPersonCamera : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        m_follow = GameObject.Find("TPCFOLLOW").transform;
+        m_follow = GameObject.Find("FPSController").transform;
 	}
 	
 	// Update is called once per frame
