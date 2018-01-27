@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameData
+  - villagerImg
+  - victimImg
   layers:
   - Default
   - TransparentFX
