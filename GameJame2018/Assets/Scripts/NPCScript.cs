@@ -27,8 +27,19 @@ public class NPCScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-            transform.LookAt(GameObject.Find("PattersonAnimation").transform.position);
-            //transform.up = new Vector3(0.0f, 1.0f, 0.0f);
+        
+
+        Vector3 pos = transform.position;
+        Vector3 targetPosition = GameObject.Find("FirstPersonCharacter").gameObject.transform.position;
+
+        Vector3 finalDirection;
+        finalDirection.x = (targetPosition.x - pos.x);
+        finalDirection.y = 1.0f;
+        finalDirection.z = (targetPosition.z - pos.z);
+
+
+        transform.forward = finalDirection;
+
 	}
 
     private void OnCollisionEnter(Collision collision)
