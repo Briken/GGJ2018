@@ -14,7 +14,7 @@ public class MainMenuScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        audio = GetComponent<AudioSource>();
+        m_audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
