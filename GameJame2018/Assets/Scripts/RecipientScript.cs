@@ -31,5 +31,5 @@ public class RecipientScript : MonoBehaviour {
         {
             return undeliveredImage;
         }
-    }
+    }   
 }
