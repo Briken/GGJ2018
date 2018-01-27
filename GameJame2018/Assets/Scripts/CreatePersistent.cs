@@ -6,7 +6,8 @@ public class CreatePersistent : MonoBehaviour {
 
     public GameObject persistentObj;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         if (GameObject.Find("PersistentGameData") == null)
         {
             Instantiate(persistentObj);
@@ -14,7 +15,8 @@ public class CreatePersistent : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 }
