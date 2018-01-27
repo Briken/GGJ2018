@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+    public AudioClip clickPlay;
+    public AudioClip optionsClick;
+    public AudioClip exitClick;
+
+    AudioSource audio;
 
 	// Use this for initialization
 	void Start ()
     {
-		
+        audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -20,16 +25,32 @@ public class MainMenuScript : MonoBehaviour
 
     public void OnPlayGameClicked()
     {
-        SceneManager.LoadScene("GameScene");
+        audio.PlayOneShot(clickPlay);
+        PlayAndLoad(clickPlay.length, "GameScene");
     }
 
     public void OnOptionsClicked()
     {
-        SceneManager.LoadScene("OptionScene");  
+        audio.PlayOneShot(optionsClick);
+        PlayAndLoad(optionsClick.length, "OptionScene");
     }
 
     public void OnExitClicked()
     {
-        Application.Quit();
+        audio.PlayOneShot(exitClick);
+        PlayAndLoad(exitClick.length, "");
+    }
+
+    IEnumerator PlayAndLoad(float dur, string scene)
+    {
+        yield return new WaitForSeconds(dur);
+        if (scene != "")
+        {
+            SceneManager.LoadScene(scene);
+        }
+        if (scene == "")
+        {
+            Application.Quit();
+        }
     }
 }

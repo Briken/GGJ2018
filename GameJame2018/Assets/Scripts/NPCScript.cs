@@ -12,6 +12,9 @@ public class NPCScript : MonoBehaviour
     public bool m_letterDelivered;
 
     public UnityEngine.UI.Image letterRecipientImage;
+
+    public AudioClip speakSound;
+
 	// Use this for initialization
 	void Start ()
     {
