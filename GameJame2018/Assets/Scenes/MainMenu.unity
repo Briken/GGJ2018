@@ -336,6 +336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d123f41c252a6b6448090987c3f3aadf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickPlay: {fileID: 8300000, guid: 85b09b33daa4e5647998ad4397101c77, type: 3}
+  optionsClick: {fileID: 8300000, guid: c7c7949386046564d89096c0e02610b7, type: 3}
+  exitClick: {fileID: 8300000, guid: f1f1e60ffd98c7644a5a54842ace453f, type: 3}
 --- !u!4 &141898088
 Transform:
   m_ObjectHideFlags: 0
@@ -613,6 +616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d123f41c252a6b6448090987c3f3aadf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickPlay: {fileID: 0}
+  optionsClick: {fileID: 0}
+  exitClick: {fileID: 0}
 --- !u!1 &919497329
 GameObject:
   m_ObjectHideFlags: 0
