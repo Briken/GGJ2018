@@ -22,6 +22,8 @@ public class PlayerScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        SpriteFlip();
+
         foreach (GameObject n in npcChars)
         {
             if (Vector3.Distance(transform.localPosition, n.transform.position) < distance)
@@ -43,6 +45,20 @@ public class PlayerScript : MonoBehaviour
         if (buttonPrompt.enabled == true && Input.GetButtonDown("Interact"))
         {
             closestNpc.GetComponent<NPCScript>().speakToPat();
+        }
+    }
+
+
+
+    void SpriteFlip()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
+        }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
         }
     }
 }
