@@ -17,7 +17,6 @@ public class FPSAnimator : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-<<<<<<< HEAD
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) && isWalking == false)
         {
             controller.SetBool("isWalking", true);
@@ -28,10 +27,5 @@ public class FPSAnimator : MonoBehaviour {
             controller.SetBool("isWalking", false);
             isWalking = false;
         }
-=======
-        
->>>>>>> origin/master
-
-
     }
 }
