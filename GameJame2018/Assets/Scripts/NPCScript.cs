@@ -17,11 +17,13 @@ public class NPCScript : MonoBehaviour
 
     public AudioClip speakSound;
     AudioSource m_audio;
+    PlayerScript playerScript;
 
 	// Use this for initialization
 	void Start ()
     {
         m_audio = GetComponent<AudioSource>();
+         playerScript = GameObject.Find("Player").GetComponent<PlayerScript>();
 	}
 	
 	// Update is called once per frame
@@ -47,6 +49,7 @@ public class NPCScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             m_isInfected = true;
+            playerScript.m_finalScore++;
         }
     }
 
