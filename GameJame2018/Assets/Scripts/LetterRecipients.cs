@@ -42,9 +42,13 @@ public class LetterRecipients : MonoBehaviour {
 
     public void FlipActiveLetters()
     {
+        Image tempImage;
+        Debug.Log(letterRecipients[0].GetComponent<RecipientScript>().GetActiveImage().name);
         for (int i = 0; i < letterRecipients.Length; i++)
         {
-            letterRecipients[i].GetComponent<RecipientScript>().GetActiveImage().enabled =! letterRecipients[i].GetComponent<RecipientScript>().GetActiveImage().enabled;
+            tempImage = letterRecipients[i].GetComponent<RecipientScript>().GetActiveImage();
+            Debug.Log(tempImage.name);
+            tempImage.enabled = !tempImage.enabled;
         }
     }
     public IEnumerator MenuWait( float dur)
