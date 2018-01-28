@@ -6,9 +6,7 @@ using UnityEngine.UI;
 public class LetterRecipients : MonoBehaviour {
 
     public GameObject[] letterRecipients;
-
-    public Button closeBag;
-
+    bool lettersActive;
 
     // Use this for initialization
     void Start()
@@ -20,7 +18,10 @@ public class LetterRecipients : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetButtonDown("Fire2"))
+        {   
+            FlipActiveLetters();   
+        }
     }
 
     public void DeliverLetter()
@@ -37,12 +38,11 @@ public class LetterRecipients : MonoBehaviour {
         }
     }
 
-    public void ShowActiveLetters()
+    public void FlipActiveLetters()
     {
-        closeBag.enabled = true;
         for (int i = 0; i < letterRecipients.Length; i++)
         {
-            letterRecipients[i].GetComponent<RecipientScript>().GetActiveImage().enabled = true;
+            letterRecipients[i].GetComponent<RecipientScript>().GetActiveImage().enabled =! letterRecipients[i].GetComponent<RecipientScript>().GetActiveImage().enabled;
         }
     }
 }
