@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour
     AudioSource[] ambientNoises;
     GameObject[] npcChars;
     GameObject closestNpc;
-    public Image buttonPrompt;
+    public Button buttonPrompt;
     float distance;
     bool deliveryActive;
     
@@ -48,23 +48,23 @@ public class PlayerScript : MonoBehaviour
         //    n.volume = (1 / dist) * n.gameObject.GetComponent<AmbientNoiseScript>().maxDistance;
         //}
 
-        //if (distance <= promptRadius && buttonPrompt.enabled == false)
-        //{
-        //    buttonPrompt.enabled = true;
-        //}
-        //if (distance > promptRadius && buttonPrompt.enabled == true)
-        //{
-        //    buttonPrompt.enabled = false;
-        //}
+        if (distance <= promptRadius && buttonPrompt.enabled == false)
+        {
+            buttonPrompt.enabled = true;
+        }
+        if (distance > promptRadius && buttonPrompt.enabled == true)
+        {
+            buttonPrompt.enabled = false;
+        }
 
-        //if (buttonPrompt.enabled == true && Input.GetButtonDown("Interact"))
-        //{
-        //    deliveryActive = true;
-        //    closestNpc.GetComponent<NPCScript>().speakToPat();
-        //    GetComponentsInChildren<Animator>().SetBool("deliveringLetter", deliveryActive);
-        //    deliveryActive = false;
-        //    GetComponentsInChildren<Animator>().SetBool("deliveringLetter", deliveryActive);
-        //}
+        if (buttonPrompt.enabled == true && Input.GetButtonDown("Fire1"))
+        {
+            deliveryActive = true;
+            closestNpc.GetComponent<NPCScript>().speakToPat();
+            GetComponentInChildren<Animator>().SetBool("deliveringLetter", deliveryActive);
+            deliveryActive = false;
+            GetComponentInChildren<Animator>().SetBool("deliveringLetter", deliveryActive);
+        }
     }
 
 
