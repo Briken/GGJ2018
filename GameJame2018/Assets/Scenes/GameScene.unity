@@ -12033,6 +12033,8 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 81663954069831796, guid: e52e018d2d601cb428fc5560ac34f805, type: 2}
+    - {fileID: 114675641668575402, guid: e52e018d2d601cb428fc5560ac34f805, type: 2}
+    - {fileID: 114431318715213502, guid: e52e018d2d601cb428fc5560ac34f805, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e52e018d2d601cb428fc5560ac34f805, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &902997091
@@ -18489,13 +18491,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d52bc4f8ebd4fd6499354dae1797beff, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.32
-  m_Pitch: 1
+  m_Volume: 1
+  m_Pitch: 0
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 247
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 107.8
@@ -18557,7 +18559,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0.31666565
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -18568,8 +18570,8 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0.033708572
-      value: 0.30833435
+      time: 0
+      value: 0.6388889
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -18581,7 +18583,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
