@@ -43,6 +43,7 @@ public class MainMenuScript : MonoBehaviour
 
     IEnumerator PlayAndLoad(float dur, string scene)
     {
+        Debug.Log(dur);
         yield return new WaitForSeconds(dur);
         if (scene != "")
         {
@@ -52,5 +53,6 @@ public class MainMenuScript : MonoBehaviour
         {
             Application.Quit();
         }
+        
     }
 }
