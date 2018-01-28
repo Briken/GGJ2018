@@ -12,15 +12,17 @@ public class LetterRecipients : MonoBehaviour {
     void Start()
     {   
         letterRecipients = GameObject.FindGameObjectsWithTag("VillagerImg");
-
+        lettersActive = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire2"))
-        {   
-            FlipActiveLetters();   
+        {
+            lettersActive =! lettersActive;
+            GetComponentInChildren<Animator>().SetBool("openingMenu",lettersActive);
+            StartCoroutine(MenuWait(1.0f));
         }
     }
 
@@ -44,5 +46,10 @@ public class LetterRecipients : MonoBehaviour {
         {
             letterRecipients[i].GetComponent<RecipientScript>().GetActiveImage().enabled =! letterRecipients[i].GetComponent<RecipientScript>().GetActiveImage().enabled;
         }
+    }
+    public IEnumerator MenuWait( float dur)
+    {
+        yield return new WaitForSeconds(dur);
+        FlipActiveLetters();
     }
 }

@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     GameObject closestNpc;
     public Image buttonPrompt;
     float distance;
+    bool deliveryActive;
     
     public float promptRadius;
 
@@ -17,6 +18,7 @@ public class PlayerScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        deliveryActive = false;
         npcChars = GameObject.FindGameObjectsWithTag("NPC");
         ambientNoises = new AudioSource[GameObject.FindGameObjectsWithTag("AmbientNoise").Length]; 
         for(int i = 0; i < ambientNoises.Length; i++)
@@ -56,7 +58,11 @@ public class PlayerScript : MonoBehaviour
 
         //if (buttonPrompt.enabled == true && Input.GetButtonDown("Interact"))
         //{
+        //    deliveryActive = true;
         //    closestNpc.GetComponent<NPCScript>().speakToPat();
+        //    GetComponentsInChildren<Animator>().SetBool("deliveringLetter", deliveryActive);
+        //    deliveryActive = false;
+        //    GetComponentsInChildren<Animator>().SetBool("deliveringLetter", deliveryActive);
         //}
     }
 
