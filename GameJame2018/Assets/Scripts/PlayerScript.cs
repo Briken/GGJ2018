@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     
     public float promptRadius;
 
+    public int m_finalScore = 1;
 
 	// Use this for initialization
 	void Start ()
