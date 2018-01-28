@@ -24,6 +24,13 @@ public class NPCScript : MonoBehaviour
     {
         m_audio = GetComponent<AudioSource>();
          playerScript = GameObject.Find("Player").GetComponent<PlayerScript>();
+        foreach (Transform n in GetComponentsInChildren<Transform>())
+        {
+            if (n.gameObject.name == "SpechBable")
+            {
+                speechBubble = n.gameObject;
+            }
+        }
 	}
 	
 	// Update is called once per frame
@@ -44,9 +51,9 @@ public class NPCScript : MonoBehaviour
 
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !m_isInfected)
         {
             m_isInfected = true;
             playerScript.m_finalScore++;
